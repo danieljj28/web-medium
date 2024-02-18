@@ -1,4 +1,5 @@
 const sectionContainer = document.querySelector(".section__container");
+const asideMain = document.querySelector(".aside__main");
 
 /*El array con cada objeto card. */
 const cardsArticle = [{
@@ -39,6 +40,8 @@ const cardsArticle = [{
 },
 ];
 
+/*El array con cada string del main__aside */
+const asideData = ["Programming", "Data Science", "Technology", "Self Improvement", "Writing", "Relationships", "Machine Learning", "Producticity", "Politics"]
 
 /*Funcion que añade cada section al article__contiainer */
 const appendCard = () => {
@@ -60,7 +63,7 @@ const appendCard = () => {
         <h1> 0${i}</h1>
     </aside>
     <footer class="article__card-footer">
-        ${cardInformation.fecha}
+        <p>${cardInformation.fecha}</p>
     </footer>
     </section>`
     i++;
@@ -69,5 +72,16 @@ const appendCard = () => {
     sectionContainer.innerHTML += htmlCode;
 }
 
+const appendAsideData = () =>{
+    let htmlCode = "";
+    for (const data of asideData) {
+        htmlCode += `<div class="aside__main-ancor"><a href="">${data}</a></div>`;
+    }
+    asideMain.innerHTML += htmlCode;
+}
+
 appendCard();
+appendAsideData();
+
+
 
