@@ -1,1 +1,1 @@
-nombre = "pedro";
+let nombre = "daniel";
