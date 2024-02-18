@@ -182,33 +182,51 @@ Hace referencia a la parte izquierda del header main(parte estatica)
 
 /*TODO LO RELACIOANDO CON LAS CARDS */
 
+/*
+Creamos la cuadrilla de cada card
+ */
 .article__card{
-    height: 150px;
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: repeat(3, 1fr);
-    gap: 10px;
+    grid-template-rows: repeat(3, minmax(min-content, 1fr));
+    gap :10px;
 }
 
+/*---------El header de la card------------*/
 .article__card-header{
     grid-column: 2 / 5;
-    border: 2px solid #000;
+    align-self: center;
+    display: flex;
+    gap : 5px;
 }
 
+/* */
+.card__img-container{
+    flex-basis: 10%;
+    height: 20px;
+    border-radius: 20px;
+}
+
+.card-header__paragraph{
+    flex-basis: 90%;
+}
+
+/*---------El aside de la card------------*/
 .article__card-aside{
     grid-row: 1 / 4;
-    border: 2px solid #000;
     grid-column: 1 / 2;
     text-align: center;
+    opacity: 0.2;
 }
 
-
+/*---------El main de la card------------*/
 .article__card-main{
     grid-column: 2 / 5;
-    border: 2px solid #000;
+    font-weight: 700;
+    line-height: 1.3em;
 }
 
+/*---------El footer de la card------------*/
 .article__card-footer{
     grid-column: 2 / 5;
-    border: 2px solid #000;
 }
